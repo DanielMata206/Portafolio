@@ -290,3 +290,66 @@ html {
     border-color: rgb(90, 202, 222);
 }
 
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .nav ul{
+        gap: 25px;
+    }
+
+    .nav ul a{
+        font-size: 14px;
+    }
+
+    .main-page{
+        flex-direction: column;
+        height: auto;
+        padding: 60px 20px 40px;
+        gap: 40px;
+    }
+
+    .main-titulo{
+        padding: 30px 25px;
+    }
+
+    .main-titulo p{
+        font-size: 16px;
+    }
+
+    .main-img-wrapper{
+        width: 70%;
+    }
+
+    .main-img-wrapper:hover{
+        width: 75%;
+    }
+
+    .project-tarjeta{
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .sobre-mi-main{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-mi-main p{
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav ul{
+        gap: 15px;
+    }
+
+    .nav ul a{
+        font-size: 12px;
+    }
+
+    .titles{
+        font-size: 28px;
+    }
+}
