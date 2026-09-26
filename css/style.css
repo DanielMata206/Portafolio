@@ -60,7 +60,7 @@ html {
 /*========================================*/
 
 .main-page {
-    background-image: url(/sources/main-img1.png);
+    background-image: url(../sources/fondo-main.png);
     height: 100vh;
     display: flex;
     justify-content: center;
