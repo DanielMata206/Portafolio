@@ -1,56 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="sources/sobre-mi.jpeg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="sources/sobre-mi.jpeg">
 </head>
 
-
-<script src="java/java.js"></script>
-</body>
-
 <body>
-    
-    <section class ="nav-main">
-         <div class="nav">
+
+    <section class="nav-main">
+        <div class="nav">
             <ul>
-                <li><a href=#Sobre-mi>Sobre mi</a></li>
-                <li><a href=#Project>Proyectos</a></li>
-                <li><a href=#Contacto>Contacto</a></li>
+                <li><a href="#Sobre-mi">Sobre mi</a></li>
+                <li><a href="#Project">Proyectos</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
             </ul>
-         </div>
-
-    </section> 
-    
-
-
-
+        </div>
+    </section>
 
     <section class="main">
         <div class="main-page">
             <div class="main-titulo">
-               <p>Mi nombre es Josue Mata, soy estudiante de<br> 
-                la carrera computer science engineering de la <br>
-                universidad catolica de honduras.</p>
+                <h1>Josué Mata</h1>
+                <h2 class="main-rol">Estudiante de Ingeniería en Sistemas</h2>
+                <p>Estudio en la Universidad Católica de Honduras (UNICAH) y hago
+                   desarrollo web y sistemas de escritorio con bases de datos.</p>
+                <div class="main-botones">
+                    <a href="#Project" class="btn btn-primario">Ver proyectos</a>
+                    <a href="#Contacto" class="btn btn-secundario">Contáctame</a>
+                </div>
             </div>
-            <img src="sources/main-img1.jpg">
+            <img src="sources/fotoFormal.jpg" alt="Josué Mata" class="main-foto">
         </div>
     </section>
 
-
-
     <section class="projects" id="Project">
 
-        <h2 class="titles"> <br> <br>PROYECTOS <br> <br></h2 >
+        <h2 class="titles"> <br> <br>PROYECTOS <br> <br></h2>
 
-        <div  class="projects-main">
+        <div class="projects-main">
 
-            
-
-           <div class="project-tarjeta">
+            <div class="project-tarjeta">
                 <h2>Proyecto Café Alaska</h2>
                 <br>
                 <img src="sources/project-cafeAlaska.png" class="imagen-tarjeta">
@@ -65,20 +57,20 @@
                 <br>
                 <img src="sources/project-coferlo.png" class="imagen-tarjeta">
                 <br>
-                <p>Este fue un proyecto desarrollado para la clase de desarrollo de 
+                <p>Este fue un proyecto desarrollado para la clase de desarrollo de
                     software, fue hecho para una ferreteria con mis compañeros el proyecto
                     cuenta tambien con un face id recognizer.
                 </p>
-                <a  target="_blank" class="tarjeta-link">Ver proyecto</a>
+                <a target="_blank" class="tarjeta-link">Ver proyecto</a>
             </div>
 
             <div class="project-tarjeta">
                 <h2>Proyecto Quiniela</h2>
                 <br>
                 <img src="sources/project-quiniela.png" class="imagen-tarjeta">
-                  <br>
-                <p>Este fue un proyecto fue desarrollado para un evento de la organizacion 
-                    llamada guaymura para poder hacer una rifa para el mundial se desarrollo 
+                <br>
+                <p>Este fue un proyecto fue desarrollado para un evento de la organizacion
+                    llamada guaymura para poder hacer una rifa para el mundial se desarrollo
                     con mi compañero Joseph Martinelli.
                 </p>
                 <a href="https://a-quiniela-guaymura.somee.com/" target="_blank" class="tarjeta-link">Ver proyecto</a>
@@ -98,17 +90,17 @@
         </div>
     </section>
 
-
-
     <section class="contacto" id="Contacto">
-    <h2 class="titles">CONTACTO</h2>
-    <div class="contacto-main">
-        <p>¿Tenés un proyecto en mente? Escribime.</p>
-        <div class="contacto-links">
-            <a href="mailto:tuemail@ejemplo.com">danielmataalv@gmail.com</a>
-            <a href="https://github.com/DanielMata206" target="_blank">GitHub</a>
+        <h2 class="titles">CONTACTO</h2>
+        <div class="contacto-main">
+            <p>¿Tenés un proyecto en mente? Escribime.</p>
+            <div class="contacto-links">
+                <a href="mailto:danielmataalv@gmail.com">danielmataalv@gmail.com</a>
+                <a href="https://github.com/DanielMata206" target="_blank">GitHub</a>
+            </div>
         </div>
-    </div>
     </section>
+
+    <script src="java/java.js"></script>
 </body>
 </html>

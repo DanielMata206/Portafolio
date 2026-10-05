@@ -1,19 +1,25 @@
+:root{
+    --marino: #0f1f3d;
+    --marino-oscuro: #08142b;
+    --marino-claro: #1c3158;
+    --hueso: #f5f1e8;
+    --hueso-oscuro: #e9e3d4;
+}
 
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-margin: 0;
+    margin: 0;
+    background-color: var(--hueso);
 }
 
-
 html {
-  scroll-behavior: smooth;
-}   
-
+    scroll-behavior: smooth;
+}
 
 
 /*========================================*/
@@ -21,38 +27,35 @@ html {
 /*========================================*/
 
 .nav{
-    background-color: #141e4b;
-    width:100%;
-    height:60px;
-    display:flex;
+    background-color: var(--marino);
+    width: 100%;
+    height: 60px;
+    display: flex;
     justify-content: center;
-    border-width: 1px;
-    border-color: whitesmoke;
-    border-style: solid;
+    border-bottom: 1px solid var(--hueso);
 }
 
 .nav ul{
-    list-style:none;
-    padding :10px;
-    display:flex;
-    gap:60px;
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    gap: 60px;
     align-items: center;
 }
 
 .nav ul a{
     font-size: 17px;
-    color: white;
-    text-decoration: none;
-    transition:0.5s ease;
-}
-
-.nav ul a:hover{
-    font-size: 20px;
-    color: rgb(90, 202, 222);
+    color: var(--hueso);
     text-decoration: none;
     transition: 0.5s ease;
 }
 
+.nav ul a:hover{
+    font-size: 20px;
+    color: var(--hueso-oscuro);
+    text-decoration: none;
+    transition: 0.5s ease;
+}
 
 
 /*========================================*/
@@ -68,131 +71,158 @@ html {
     opacity: 95%;
     gap: 15%;
     background-size: cover;
-    background-position:center top;
+    background-position: center top;
     background-repeat: no-repeat;
-
-    
 }
 
 .main-titulo{
-    background: #141e4b;
-    padding: 50px 50px;
+    background: var(--marino);
+    padding: 50px;
+    max-width: 520px;
     border-radius: 5px;
-    border-color:whitesmoke;
-    border-style:solid;
-    
+    border: 1px solid var(--hueso);
+    transition: background 0.5s ease, transform 0.5s ease;
 }
 
-
 .main-titulo:hover{
-    background: #09154c;
-    border-radius: 5px;
-    padding: 60px 60px;
-    border-color:whitesmoke;
-    border-style:solid;
-    transition: 0.5s ease;
+    background: var(--marino-oscuro);
+    transform: translateY(-5px);
+}
+
+.main-titulo h1{
+    color: var(--hueso);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+}
+
+.main-rol{
+    color: var(--hueso-oscuro);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 8px 0 16px;
 }
 
 .main-titulo p{
-    color:white;
-    font-size: 20px;
-    letter-spacing: 3%;
+    color: var(--hueso);
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.main-botones{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.btn{
+    padding: 10px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid var(--hueso);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primario{
+    background-color: var(--hueso);
+    color: var(--marino);
+}
+
+.btn-primario:hover{
+    background-color: transparent;
+    color: var(--hueso);
+}
+
+.btn-secundario{
+    background-color: transparent;
+    color: var(--hueso);
+}
+
+.btn-secundario:hover{
+    background-color: var(--hueso);
+    color: var(--marino);
+}
+
+.main-foto{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--hueso);
+    box-shadow: 0 10px 30px rgba(8, 20, 43, 0.5);
+    transition: transform 0.6s ease;
+}
+
+.main-foto:hover{
+    transform: scale(1.05);
 }
 
 
+/*========================================*/
+/*================PROYECTOS=================*/
+/*========================================*/
+
 .projects-main{
-    background-color: #ecedf1;
+    background-color: var(--hueso);
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
     gap: 50px;
-    padding: 20px 1%;
+    padding: 20px 1% 60px;
 }
-
-
-
-
-
-.main-page img { 
-    width: 45%;
-    padding: 10px;
-    border-radius: 5%;
-    border-color: whitesmoke;
-    transition: 1s ease; /* Solo necesitas declararlo aquí */
-}
-
-.main-page img:hover { 
-    width: 50%;
-    background-image: url('/sources/main-fondo.jpg');
-    background-size: cover; 
-    background-position: center; 
-    transition: 1s ease;
-}
-
-
-
-
 
 .titles{
-    color: rgb(92, 87, 87);
+    color: var(--marino);
     text-align: center;
     font-size: 40px;
-    background-color: #ecedf1;
+    background-color: var(--hueso);
 }
 
-
-
 .project-tarjeta{
-    background-color: #0000007e;
+    background-color: var(--marino);
     border-radius: 10px;
-    border: 1px solid aliceblue;
+    border: 1px solid var(--marino-claro);
     padding: 20px 20px 25px;
     width: 320px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(8, 20, 43, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    
 }
 
 .project-tarjeta:hover{
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+    box-shadow: 0 10px 25px rgba(8, 20, 43, 0.45);
 }
-
 
 .project-tarjeta h2{
     font-size: 25px;
-    color: white;
+    color: var(--hueso);
     text-align: center;
-    
 }
-
 
 .project-tarjeta p{
     font-size: 15px;
-    color: white;
+    color: var(--hueso);
     text-align: center;
-    
 }
-
 
 .project-tarjeta img{
-     width: 80%;
-     height: auto;
-     border-radius: 5px;
-     display: block;
-     margin: 0 auto;
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
 }
-
 
 .tarjeta-link{
     padding: 8px 20px;
-    background-color: rgb(76, 77, 78);
-    color: #e3e5ef;
+    background-color: var(--hueso);
+    color: var(--marino);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
@@ -200,22 +230,23 @@ html {
 }
 
 .tarjeta-link:hover{
-    background-color: rgb(60, 54, 54);
+    background-color: var(--hueso-oscuro);
 }
 
 
-
-
-
-
-
-
-
+/*========================================*/
+/*================SOBRE MI==================*/
+/*========================================*/
 
 .sobre-mi{
-    background-color: #eaebf1;
+    background-color: var(--hueso-oscuro);
     padding: 60px 5%;
     text-align: center;
+}
+
+.sobre-mi .titles{
+    background-color: transparent;
+    margin-bottom: 30px;
 }
 
 .sobre-mi-main{
@@ -233,41 +264,39 @@ html {
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #141e4b;
+    border: 3px solid var(--marino);
 }
 
 .sobre-mi-main p{
-    color: #141e4b;
+    color: var(--marino);
     font-size: 17px;
+    line-height: 1.6;
     text-align: left;
     flex: 1;
     min-width: 250px;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*========================================*/
+/*=================CONTACTO=================*/
+/*========================================*/
 
 .contacto{
-    background-color: #eaebf1;
+    background-color: var(--marino);
     padding: 60px 5%;
     text-align: center;
+}
+
+.contacto .titles{
+    background-color: transparent;
+    color: var(--hueso);
+    margin-bottom: 20px;
 }
 
 .contacto-main p{
     font-size: 18px;
     margin-bottom: 20px;
-    color: #141e4b;
+    color: var(--hueso);
 }
 
 .contacto-links{
@@ -278,7 +307,7 @@ html {
 }
 
 .contacto-links a{
-    color: #141e4b;
+    color: var(--hueso);
     font-size: 18px;
     text-decoration: none;
     font-weight: bold;
@@ -287,9 +316,8 @@ html {
 }
 
 .contacto-links a:hover{
-    border-color: rgb(90, 202, 222);
+    border-color: var(--hueso);
 }
-
 
 
 /* ===== RESPONSIVE ===== */
@@ -311,18 +339,21 @@ html {
 
     .main-titulo{
         padding: 30px 25px;
+        max-width: 100%;
+        text-align: center;
     }
 
     .main-titulo p{
         font-size: 16px;
     }
 
-    .main-img-wrapper{
-        width: 70%;
+    .main-botones{
+        justify-content: center;
     }
 
-    .main-img-wrapper:hover{
-        width: 75%;
+    .main-foto{
+        width: 200px;
+        height: 200px;
     }
 
     .project-tarjeta{
@@ -351,6 +382,5 @@ html {
 
     .titles{
         font-size: 28px;
- 
     }
 }
