@@ -124,7 +124,7 @@ html {
 
 .main-page img:hover { 
     width: 50%;
-    /*background-image: url('/sources/main-fondo.jpg');*/
+    background-image: url('/sources/main-fondo.jpg');
     background-size: cover; 
     background-position: center; 
     transition: 1s ease;
@@ -351,5 +351,6 @@ html {
 
     .titles{
         font-size: 28px;
+ 
     }
 }
