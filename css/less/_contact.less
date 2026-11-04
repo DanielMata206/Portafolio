@@ -1,0 +1,95 @@
+// ==========================================================================
+// SECCIÓN CONTACTO Y PIE DE PÁGINA
+// ==========================================================================
+
+.contacto {
+    .section-spacing();
+    background-color: @marino;
+    text-align: center;
+    color: @hueso;
+}
+
+.contacto-container {
+    .container(820px);
+}
+
+.contacto .section-subtitulo {
+    color: @hueso-oscuro;
+    opacity: 0.85;
+}
+
+.contacto .titles {
+    background-color: transparent;
+    color: @hueso;
+
+    &::after {
+        background-color: @hueso;
+    }
+}
+
+.contacto-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.contacto-main p {
+    font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+    max-width: 540px;
+    color: @hueso-oscuro;
+    margin: 0;
+}
+
+.contacto-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.contacto-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1.6rem;
+    min-height: 52px;
+    background-color: @marino-claro;
+    color: @hueso;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: @radius-sm;
+    border: 1px solid rgba(245, 241, 232, 0.24);
+    transition: transform @transition-base, background-color @transition-base, border-color @transition-base, box-shadow @transition-base;
+    .focus-ring(@hueso);
+
+    svg {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+
+    &:hover {
+        background-color: @hueso;
+        color: @marino;
+        border-color: @hueso;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(8, 20, 43, 0.45);
+    }
+}
+
+.footer {
+    background-color: @marino-oscuro;
+    border-top: 1px solid rgba(245, 241, 232, 0.12);
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    color: @hueso-oscuro;
+    font-size: 0.88rem;
+
+    p {
+        margin: 0;
+        opacity: 0.85;
+    }
+}

@@ -1,0 +1,57 @@
+// ==========================================================================
+// MIXINS REUTILIZABLES
+// ==========================================================================
+
+.container(@max-width: @container-max) {
+    width: 100%;
+    max-width: @max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1.25rem, 4vw, 2.5rem);
+    padding-right: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.flex-center(@direction: row, @gap: 0) {
+    display: flex;
+    flex-direction: @direction;
+    align-items: center;
+    justify-content: center;
+    gap: @gap;
+}
+
+.focus-ring(@color: @hueso, @offset: 3px) {
+    &:focus-visible {
+        outline: 2px solid @color;
+        outline-offset: @offset;
+    }
+}
+
+.section-spacing() {
+    padding-top: clamp(4.5rem, 8vw, 6.5rem);
+    padding-bottom: clamp(4.5rem, 8vw, 6.5rem);
+}
+
+.card-elevated() {
+    background-color: @marino;
+    border-radius: @radius-md;
+    border: 1px solid rgba(245, 241, 232, 0.14);
+    box-shadow: var(--sombra-media);
+}
+
+.button-base() {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    padding: 0.7rem 1.5rem;
+    border-radius: @radius-sm;
+    font-family: @font-sans;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform @transition-base, background-color @transition-base, color @transition-base, border-color @transition-base, box-shadow @transition-base;
+    .focus-ring(@hueso);
+}

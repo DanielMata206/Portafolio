@@ -1,0 +1,122 @@
+// ==========================================================================
+// ESTILOS BASE, RESET Y ACCESIBILIDAD
+// ==========================================================================
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: @font-sans;
+    font-size: 1rem;
+    line-height: 1.65;
+    color: @marino;
+    background-color: @hueso;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: @font-display;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Enlace de salto para accesibilidad por teclado
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 2000;
+    padding: 0.75rem 1.25rem;
+    background-color: @marino-oscuro;
+    color: @hueso;
+    font-weight: 600;
+    border-radius: @radius-sm;
+    border: 2px solid @hueso;
+    text-decoration: none;
+    transition: top @transition-fast;
+
+    &:focus {
+        top: 1rem;
+        outline: none;
+    }
+}
+
+// Encabezados de sección (.titles conservando identidad visual)
+.section-header {
+    text-align: center;
+    margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+}
+
+.section-subtitulo {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: @marino-claro;
+    margin-bottom: 0.5rem;
+}
+
+.titles {
+    color: @marino;
+    text-align: center;
+    font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background-color: transparent;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.75rem;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 56px;
+        height: 3px;
+        border-radius: @radius-pill;
+        background-color: @marino;
+    }
+}
+
+// Respeto a prefers-reduced-motion
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

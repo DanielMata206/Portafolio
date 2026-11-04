@@ -1,0 +1,182 @@
+// ==========================================================================
+// SECCIÓN PROYECTOS Y TARJETAS UNIFORMES
+// ==========================================================================
+
+.projects {
+    .section-spacing();
+    background-color: @hueso;
+}
+
+.projects-container {
+    .container();
+}
+
+.projects-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.project-tarjeta {
+    .card-elevated();
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    // Estado inicial para animación controlada por IntersectionObserver (.visible)
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity 0.65s @ease-out-expo,
+        transform 0.65s @ease-out-expo,
+        box-shadow @transition-base,
+        border-color @transition-base;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &.visible:hover,
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--sombra-fuerte);
+        border-color: rgba(245, 241, 232, 0.35);
+
+        .imagen-tarjeta {
+            transform: scale(1.04);
+        }
+    }
+}
+
+.tarjeta-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background-color: @marino-oscuro;
+    border-bottom: 1px solid rgba(245, 241, 232, 0.12);
+}
+
+.imagen-tarjeta {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform @transition-slow;
+}
+
+.tarjeta-cuerpo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.5rem 1.5rem 1.6rem;
+    gap: 0.9rem;
+}
+
+.project-tarjeta h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: @hueso;
+    margin: 0;
+    letter-spacing: -0.015em;
+}
+
+.project-tarjeta p {
+    font-size: 0.95rem;
+    line-height: 1.62;
+    color: @hueso-oscuro;
+    margin: 0;
+    flex: 1;
+}
+
+.tarjeta-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    list-style: none;
+    padding: 0.25rem 0 0;
+    margin: 0;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.68rem;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: @hueso;
+    background-color: @marino-claro;
+    border: 1px solid rgba(245, 241, 232, 0.18);
+    border-radius: @radius-pill;
+}
+
+.tarjeta-acciones {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(245, 241, 232, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tarjeta-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    width: 100%;
+    min-height: 42px;
+    padding: 0.6rem 1.25rem;
+    background-color: @hueso;
+    color: @marino;
+    text-decoration: none;
+    border-radius: @radius-sm;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: background-color @transition-fast, transform @transition-fast, box-shadow @transition-fast;
+    .focus-ring(@hueso);
+
+    svg {
+        width: 16px;
+        height: 16px;
+        transition: transform @transition-fast;
+    }
+
+    &:hover {
+        background-color: @hueso-oscuro;
+        transform: translateY(-1px);
+
+        svg {
+            transform: translate(2px, -2px);
+        }
+    }
+}
+
+// Estado informativo cuando el proyecto es de escritorio local sin despliegue web
+.tarjeta-estado {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    min-height: 42px;
+    padding: 0.6rem 1.25rem;
+    background-color: rgba(245, 241, 232, 0.08);
+    color: @hueso-oscuro;
+    border: 1px dashed rgba(245, 241, 232, 0.28);
+    border-radius: @radius-sm;
+    font-size: 0.86rem;
+    font-weight: 600;
+    cursor: default;
+
+    svg {
+        width: 16px;
+        height: 16px;
+        opacity: 0.85;
+    }
+}

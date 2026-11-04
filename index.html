@@ -3,143 +3,441 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Josué Mata | Portafolio — Ingeniería en Ciencias de la Computación</title>
+    <meta name="description" content="Portafolio profesional de Josué Mata, estudiante de Ingeniería en Ciencias de la Computación en la Universidad Católica de Honduras (UNICAH). Desarrollo web, sistemas de escritorio y bases de datos.">
+    <meta name="author" content="Josué Mata">
+    <meta name="theme-color" content="#0f1f3d">
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_HN">
+    <meta property="og:title" content="Josué Mata | Portafolio de Desarrollo de Software">
+    <meta property="og:description" content="Estudiante de Ingeniería en Ciencias de la Computación (UNICAH) con experiencia en desarrollo web, sistemas de escritorio e integración de bases de datos.">
+    <meta property="og:image" content="sources/fotoFormal.webp">
+
+    <!-- Tipografía (Google Fonts: Inter & Plus Jakarta Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Favicon y Hoja de Estilos LESS (compilada por Vite) -->
     <link rel="icon" type="image/png" href="sources/maletin.png">
+    <link rel="stylesheet" href="css/style.less">
 </head>
 
 <body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
 
-    <section class="nav-main">
-        <div class="nav">
-            <ul>
-                <li><a href="#Sobre-mi">Sobre mi</a></li>
+    <header class="nav-main">
+        <nav class="nav" aria-label="Navegación principal">
+            <a href="#" class="nav-brand" aria-label="Josué Mata — Ir al inicio">
+                <span class="nav-brand-badge" aria-hidden="true">JM</span>
+                <span>Josué Mata</span>
+            </a>
+
+            <button
+                type="button"
+                class="nav-toggle"
+                aria-expanded="false"
+                aria-controls="nav-menu"
+                aria-label="Abrir menú de navegación"
+            >
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <ul id="nav-menu">
                 <li><a href="#Project">Proyectos</a></li>
+                <li><a href="#Sobre-mi">Sobre mí</a></li>
                 <li><a href="#Contacto">Contacto</a></li>
             </ul>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <section class="main">
-        <div class="main-page">
-            <div class="main-titulo">
-                <h1>Josué Mata</h1>
-                <h2 class="main-rol">Estudiante de Ingeniería en Sistemas</h2>
-                <p>Estudio en la Universidad Católica de Honduras (UNICAH) y hago
-                   desarrollo web y sistemas de escritorio con bases de datos.</p>
-                <div class="main-botones">
-                    <a href="#Project" class="btn btn-primario">Ver proyectos</a>
-                    <a href="#Contacto" class="btn btn-secundario">Contáctame</a>
+    <main id="contenido-principal">
+        <section class="main" aria-label="Presentación principal">
+            <div class="main-page">
+                <div class="main-titulo">
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot" aria-hidden="true"></span>
+                        <span>UNICAH · Honduras</span>
+                    </div>
+                    <h1>Josué Mata</h1>
+                    <p class="main-rol">Estudiante de Ingeniería en Ciencias de la Computación</p>
+                    <p>
+                        Me formo en la Universidad Católica de Honduras (UNICAH) y desarrollo sitios web
+                        modernos, aplicaciones interactivas y sistemas de escritorio integrados con bases de datos.
+                    </p>
+                    <div class="main-botones">
+                        <a href="#Project" class="btn btn-primario">Ver proyectos</a>
+                        <a href="#Contacto" class="btn btn-secundario">Contáctame</a>
+                    </div>
+                </div>
+
+                <div class="main-foto-contenedor">
+                    <img
+                        src="sources/fotoFormal.webp"
+                        alt="Retrato formal de Josué Mata"
+                        class="main-foto"
+                        width="640"
+                        height="792"
+                        fetchpriority="high"
+                        decoding="async"
+                    >
                 </div>
             </div>
-            <img src="sources/fotoFormal.jpg" alt="Josué Mata" class="main-foto">
-        </div>
-    </section>
+        </section>
 
-    <section class="projects" id="Project">
+        <section class="projects" id="Project" aria-labelledby="titulo-proyectos">
+            <div class="projects-container">
+                <div class="section-header">
+                    <span class="section-subtitulo">Portafolio de desarrollo</span>
+                    <h2 class="titles" id="titulo-proyectos">PROYECTOS</h2>
+                </div>
 
-        <h2 class="titles"> <br> <br>PROYECTOS <br> <br></h2>
+                <div class="projects-main">
+                    <!-- 1. Proyecto Café Alaska -->
+                    <article class="project-tarjeta">
+                        <div class="tarjeta-media">
+                            <img
+                                src="sources/project-cafeAlaska.webp"
+                                alt="Vista previa del sitio web de Café Alaska con su menú y estética elegante"
+                                class="imagen-tarjeta"
+                                width="800"
+                                height="446"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h3>Proyecto Café Alaska</h3>
+                            <p>
+                                Proyecto personal enfocado en la presentación digital y menú de una cafetería con una estética
+                                elegante, proyectado para escalar con un módulo de escritorio para el control de ventas e inventario.
+                            </p>
+                            <ul class="tarjeta-badges" aria-label="Tecnologías utilizadas en Proyecto Café Alaska">
+                                <li class="badge">HTML5</li>
+                                <li class="badge">CSS3</li>
+                                <li class="badge">JavaScript</li>
+                            </ul>
+                            <div class="tarjeta-acciones">
+                                <a
+                                    href="https://danielmata206.github.io/Proyecto-cafeteria/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tarjeta-link"
+                                    aria-label="Ver demostración de Proyecto Café Alaska (se abre en una nueva pestaña)"
+                                >
+                                    <span>Ver proyecto</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M7 17L17 7"></path>
+                                        <path d="M7 7h10v10"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
-        <div class="projects-main">
+                    <!-- 2. Proyecto Coferlo -->
+                    <article class="project-tarjeta">
+                        <div class="tarjeta-media">
+                            <img
+                                src="sources/project-coferlo.webp"
+                                alt="Panel de administración y métricas de ventas del sistema de escritorio Coferlo"
+                                class="imagen-tarjeta"
+                                width="800"
+                                height="468"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h3>Proyecto Coferlo</h3>
+                            <p>
+                                Sistema de gestión administrativa y punto de venta para una ferretería, desarrollado en equipo
+                                para la asignatura de Desarrollo de Software. Incluye panel de métricas e inicio de sesión mediante reconocimiento facial.
+                            </p>
+                            <ul class="tarjeta-badges" aria-label="Tecnologías utilizadas en Proyecto Coferlo">
+                                <li class="badge">C#</li>
+                                <li class="badge">.NET (WinForms)</li>
+                                <li class="badge">Base de Datos</li>
+                                <li class="badge">Reconocimiento Facial</li>
+                            </ul>
+                            <div class="tarjeta-acciones">
+                                <span class="tarjeta-estado" aria-label="Proyecto de escritorio local sin demostración web pública">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                    <span>Sistema de escritorio</span>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
 
-            <div class="project-tarjeta">
-                <h2>Proyecto Café Alaska</h2>
-                <br>
-                <img src="sources/project-cafeAlaska.png" class="imagen-tarjeta">
-                <br>
-                <p>Este fue un proyecto personal pensando en un menu de una cafeteria teniendo pensado un diseño elegante
-                    tambien se tiene pensado hacer un sistema de escritorio para el manejo de venta y entrada del producto.</p>
-                <a href="https://danielmata206.github.io/Proyecto-cafeteria/" target="_blank" class="tarjeta-link">Ver proyecto</a>
+                    <!-- 3. Proyecto Quiniela -->
+                    <article class="project-tarjeta">
+                        <div class="tarjeta-media">
+                            <img
+                                src="sources/project-quiniela.webp"
+                                alt="Interfaz principal de la aplicación web Quiniela Guaymura para el Mundial"
+                                class="imagen-tarjeta"
+                                width="800"
+                                height="434"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h3>Proyecto Quiniela</h3>
+                            <p>
+                                Plataforma web interactiva creada para gestionar una quiniela y sorteo del Mundial para un evento
+                                de la organización Guaymura, desarrollada en colaboración con mi compañero Joseph Joel Martínez.
+                            </p>
+                            <ul class="tarjeta-badges" aria-label="Tecnologías utilizadas en Proyecto Quiniela">
+                                <li class="badge">HTML5</li>
+                                <li class="badge">CSS3</li>
+                                <li class="badge">JavaScript</li>
+                                <li class="badge">Base de Datos</li>
+                            </ul>
+                            <div class="tarjeta-acciones">
+                                <a
+                                    href="https://a-quiniela-guaymura.somee.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tarjeta-link"
+                                    aria-label="Ver demostración de Proyecto Quiniela (se abre en una nueva pestaña)"
+                                >
+                                    <span>Ver proyecto</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M7 17L17 7"></path>
+                                        <path d="M7 7h10v10"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 4. Proyecto PANAH -->
+                    <article class="project-tarjeta">
+                        <div class="tarjeta-media">
+                            <img
+                                src="sources/PANAH.webp"
+                                alt="Página de inicio del portal web solidario para la organización PANAH"
+                                class="imagen-tarjeta"
+                                width="800"
+                                height="494"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h3>Proyecto PANAH</h3>
+                            <p>
+                                Portal informativo y de apoyo social diseñado para la organización PANAH en la asignatura de
+                                Portales Web, enfocado en difundir programas comunitarios, eventos y canales de donación mediante el trabajo colaborativo.
+                            </p>
+                            <ul class="tarjeta-badges" aria-label="Tecnologías utilizadas en Proyecto PANAH">
+                                <li class="badge">HTML5</li>
+                                <li class="badge">CSS3</li>
+                                <li class="badge">JavaScript</li>
+                            </ul>
+                            <div class="tarjeta-acciones">
+                                <a
+                                    href="https://danielmata206.github.io/proyectoPortalesGG/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tarjeta-link"
+                                    aria-label="Ver demostración de Proyecto PANAH (se abre en una nueva pestaña)"
+                                >
+                                    <span>Ver proyecto</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M7 17L17 7"></path>
+                                        <path d="M7 7h10v10"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 5. Emaris Cleaning -->
+                    <article class="project-tarjeta">
+                        <div class="tarjeta-media">
+                            <img
+                                src="sources/EmarisCleaning.webp"
+                                alt="Sitio web comercial de servicios de limpieza profesional Emaris Cleaning"
+                                class="imagen-tarjeta"
+                                width="800"
+                                height="497"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h3>Emaris Cleaning</h3>
+                            <p>
+                                Sitio web comercial desarrollado a medida para una clienta del sector de limpieza profesional.
+                                Presenta una experiencia visual clara, atractiva e interactiva, realizada junto a Joseph Joel Martínez.
+                            </p>
+                            <ul class="tarjeta-badges" aria-label="Tecnologías utilizadas en Emaris Cleaning">
+                                <li class="badge">HTML5</li>
+                                <li class="badge">CSS3</li>
+                                <li class="badge">JavaScript</li>
+                            </ul>
+                            <div class="tarjeta-acciones">
+                                <a
+                                    href="https://emariscleaning.netlify.app/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tarjeta-link"
+                                    aria-label="Ver sitio web de Emaris Cleaning (se abre en una nueva pestaña)"
+                                >
+                                    <span>Ver proyecto</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M7 17L17 7"></path>
+                                        <path d="M7 7h10v10"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 6. Conoce Honduras -->
+                    <article class="project-tarjeta">
+                        <div class="tarjeta-media">
+                            <img
+                                src="sources/ConoceHonduras.webp"
+                                alt="Portal turístico Explora y Conoce Honduras con destinos y regiones del país"
+                                class="imagen-tarjeta"
+                                width="800"
+                                height="494"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+                        <div class="tarjeta-cuerpo">
+                            <h3>Conoce Honduras</h3>
+                            <p>
+                                Portal turístico desarrollado en la asignatura de Desarrollo de Portales Web II, implementando
+                                frameworks de diseño como Bootstrap y Bulma para construir una interfaz ágil, moderna y adaptable.
+                            </p>
+                            <ul class="tarjeta-badges" aria-label="Tecnologías utilizadas en Conoce Honduras">
+                                <li class="badge">HTML5</li>
+                                <li class="badge">CSS3</li>
+                                <li class="badge">Bootstrap</li>
+                                <li class="badge">Bulma</li>
+                            </ul>
+                            <div class="tarjeta-acciones">
+                                <a
+                                    href="https://danielmata206.github.io/Conoce-Honduras/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="tarjeta-link"
+                                    aria-label="Ver demostración de Conoce Honduras (se abre en una nueva pestaña)"
+                                >
+                                    <span>Ver proyecto</span>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M7 17L17 7"></path>
+                                        <path d="M7 7h10v10"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <div class="project-tarjeta">
-                <h2>Proyecto Coferlo</h2>
-                <br>
-                <img src="sources/project-coferlo.png" class="imagen-tarjeta">
-                <br>
-                <p>Este fue un proyecto desarrollado para la clase de desarrollo de
-                    software, fue hecho para una ferreteria con mis compañeros el proyecto
-                    cuenta tambien con un face id recognizer.
-                </p>
-                <a target="_blank" class="tarjeta-link">Ver proyecto</a>
+        <section class="sobre-mi" id="Sobre-mi" aria-labelledby="titulo-sobre-mi">
+            <div class="sobre-mi-container">
+                <div class="section-header">
+                    <span class="section-subtitulo">Perfil académico y técnico</span>
+                    <h2 class="titles" id="titulo-sobre-mi">SOBRE MÍ</h2>
+                </div>
+
+                <div class="sobre-mi-main">
+                    <div class="sobre-mi-img-wrapper">
+                        <img
+                            src="sources/sobre-mi.webp"
+                            alt="Fotografía personal de Josué Mata al aire libre"
+                            class="sobre-mi-img"
+                            width="440"
+                            height="587"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+
+                    <div class="sobre-mi-texto">
+                        <p>
+                            Soy estudiante de <strong>Ingeniería en Ciencias de la Computación</strong> en la Universidad Católica
+                            de Honduras (UNICAH), con experiencia práctica en desarrollo web, ingeniería de software y bases de datos
+                            adquirida a través de proyectos académicos y para clientes reales.
+                        </p>
+                        <p>
+                            Me enfoco en crear soluciones funcionales, limpias y bien estructuradas, combinando interfaces modernas
+                            con lógica de negocio sólida mientras continúo ampliando mi trayectoria profesional.
+                        </p>
+                        <ul class="sobre-mi-enfoque" aria-label="Áreas de enfoque">
+                            <li class="enfoque-item">Desarrollo Web</li>
+                            <li class="enfoque-item">Ingeniería de Software</li>
+                            <li class="enfoque-item">Sistemas de Escritorio</li>
+                            <li class="enfoque-item">Bases de Datos</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="project-tarjeta">
-                <h2>Proyecto Quiniela</h2>
-                <br>
-                <img src="sources/project-quiniela.png" class="imagen-tarjeta">
-                <br>
-                <p>Este fue un proyecto fue desarrollado para un evento de la organizacion
-                    llamada guaymura para poder hacer una rifa para el mundial se desarrollo
-                    con mi compañero Joseph Joel Martinez.
-                </p>
-                <a href="https://a-quiniela-guaymura.somee.com/" target="_blank" class="tarjeta-link">Ver proyecto</a>
+        <section class="contacto" id="Contacto" aria-labelledby="titulo-contacto">
+            <div class="contacto-container">
+                <div class="section-header">
+                    <span class="section-subtitulo">Hablemos</span>
+                    <h2 class="titles" id="titulo-contacto">CONTACTO</h2>
+                </div>
+
+                <div class="contacto-main">
+                    <p>¿Tienes un proyecto en mente o una oportunidad laboral? Escríbeme y conversemos.</p>
+                    <div class="contacto-links">
+                        <a
+                            href="mailto:danielmataalv@gmail.com"
+                            class="contacto-card"
+                            aria-label="Enviar correo electrónico a danielmataalv@gmail.com"
+                        >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                            <span>danielmataalv@gmail.com</span>
+                        </a>
+
+                        <a
+                            href="https://github.com/DanielMata206"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contacto-card"
+                            aria-label="Visitar perfil de GitHub de DanielMata206 (se abre en una nueva pestaña)"
+                        >
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                            </svg>
+                            <span>GitHub · DanielMata206</span>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </section>
+    </main>
 
+    <footer class="footer">
+        <p>© 2026 Josué Mata · Ingeniería en Ciencias de la Computación (UNICAH)</p>
+    </footer>
 
-            <div class="project-tarjeta">
-                <h2>Proyecto PANAH</h2>
-                <br>
-                <img src="sources/PANAH.png" class="imagen-tarjeta">
-                <br>
-                <p>Proyecto de la asignatura de Portales Web  para una organización PANAH fue un trabajo en conjunto
-                    se aprendio mucho, como el trabajo en equipo .
-                </p>
-                <a href="https://danielmata206.github.io/proyectoPortalesGG/" target="_blank" class="tarjeta-link">Ver proyecto</a>
-            </div>
-
-
-            <div class="project-tarjeta">
-                <h2>Emaris Cleaning</h2>
-                <br>
-                <img src="sources/EmarisCleaning.png" class="imagen-tarjeta">
-                <br>
-                <p>Este fue un proyecto fue desarrollado para una clienta deseaba una 
-                    pagina que fuera sencilla llamativa y muy interactiva, este proyecto
-                    se realizo en conjunto con Joseph Joel Martinez.
-                </p>
-                <a href="https://emariscleaning.netlify.app/" target="_blank" class="tarjeta-link">Ver proyecto</a>
-            </div>
-
-
-
-
-            <div class="project-tarjeta">
-                <h2>Conoce Honduras</h2>
-                <br>
-                <img src="sources/ConoceHonduras.png" class="imagen-tarjeta">
-                <br>
-                <p>Este fue un proyecto fue desarrollado para un trabajo en la asignatura de Desarrollo de 
-                    portales web ll para aprender a usar plantillas como Bulma y Bootstrap asi un desarrollo rapido.
-                </p>
-                <a href="https://danielmata206.github.io/Conoce-Honduras/" target="_blank" class="tarjeta-link">Ver proyecto</a>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="sobre-mi" id="Sobre-mi">
-        <h2 class="titles">SOBRE MI</h2>
-        <div class="sobre-mi-main">
-            <img src="sources/sobre-mi.jpeg" alt="Foto de perfil" class="sobre-mi-img">
-            <p>Soy estudiante de Ingeniería en Ciencias de la computación en la Universidad Católica de Honduras (UNICAH),
-                con experiencia en desarrollo web, ingeniería de software y bases de datos a través de
-                proyectos de clase. Estoy armando este portafolio para empezar a trabajar.</p>
-        </div>
-    </section>
-
-    <section class="contacto" id="Contacto">
-        <h2 class="titles">CONTACTO</h2>
-        <div class="contacto-main">
-            <p>¿Tenés un proyecto en mente? Escribime.</p>
-            <div class="contacto-links">
-                <a href="mailto:danielmataalv@gmail.com">danielmataalv@gmail.com</a>
-                <a href="https://github.com/DanielMata206" target="_blank">GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <script src="java/java.js"></script>
+    <script type="module" src="java/java.js"></script>
 </body>
 </html>
